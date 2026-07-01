@@ -1,0 +1,13 @@
+[
+  { "product_id": 1, "category_id": 1, "category_name": "Elektronik", "product_name": "Earphone Bluetooth TWS X10", "description": "Earphone nirkabel dengan kualitas suara jernih dan baterai tahan lama", "price": 149000, "stock": 45 },
+  { "product_id": 2, "category_id": 1, "category_name": "Elektronik", "product_name": "Power Bank 10000mAh", "description": "Power bank kompak dengan fast charging untuk kebutuhan harian", "price": 179000, "stock": 60 },
+  { "product_id": 3, "category_id": 1, "category_name": "Elektronik", "product_name": "Smartwatch Fit Pro", "description": "Jam tangan pintar dengan fitur monitor detak jantung dan notifikasi", "price": 349000, "stock": 25 },
+  { "product_id": 4, "category_id": 2, "category_name": "Fashion Pria", "product_name": "Kemeja Flanel Kotak-kotak", "description": "Kemeja flanel bahan katun tebal, nyaman untuk cuaca dingin", "price": 129000, "stock": 80 },
+  { "product_id": 5, "category_id": 2, "category_name": "Fashion Pria", "product_name": "Celana Chino Slim Fit", "description": "Celana chino dengan potongan slim, cocok untuk kerja maupun santai", "price": 159000, "stock": 55 },
+  { "product_id": 6, "category_id": 3, "category_name": "Fashion Wanita", "product_name": "Dress Batik Modern", "description": "Dress batik dengan motif modern, cocok untuk acara formal", "price": 219000, "stock": 30 },
+  { "product_id": 7, "category_id": 3, "category_name": "Fashion Wanita", "product_name": "Blouse Katun Premium", "description": "Blouse berbahan katun premium yang adem dipakai sehari-hari", "price": 99000, "stock": 70 },
+  { "product_id": 8, "category_id": 4, "category_name": "Peralatan Rumah Tangga", "product_name": "Rice Cooker Mini 1 Liter", "description": "Rice cooker praktis untuk 1-2 porsi, cocok untuk anak kost", "price": 199000, "stock": 40 },
+  { "product_id": 9, "category_id": 4, "category_name": "Peralatan Rumah Tangga", "product_name": "Setrika Uap Portable", "description": "Setrika uap ringan dan mudah dibawa untuk perjalanan", "price": 89000, "stock": 50 },
+  { "product_id": 10, "category_id": 5, "category_name": "Makanan & Minuman", "product_name": "Kopi Robusta Lampung 250gr", "description": "Biji kopi robusta pilihan langsung dari petani Lampung", "price": 45000, "stock": 100 },
+  { "product_id": 11, "category_id": 5, "category_name": "Makanan & Minuman", "product_name": "Keripik Singkong Balado", "description": "Keripik singkong renyah dengan bumbu balado pedas manis", "price": 22000, "stock": 120 }
+]
