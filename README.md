@@ -126,9 +126,9 @@ File lengkap ada di [`backend/database/schema.sql`](backend/database/schema.sql)
 ### 1. Siapkan database
 
 ```bash
-mysql -u root -p -e "CREATE DATABASE mini_marketplace_catalog"
-mysql -u root -p mini_marketplace_catalog < backend/database/schema.sql
-mysql -u root -p mini_marketplace_catalog < backend/database/seed.sql
+mysql -u root -p -e "CREATE DATABASE minimarket_db"
+mysql -u root -p minimarket_db < backend/database/schema.sql
+mysql -u root -p minimarket_db < backend/database/seed.sql
 ```
 
 ### 2. Jalankan backend
@@ -180,6 +180,18 @@ Dari 11 produk contoh yang di-seed:
 - Kategori dengan jumlah produk terbanyak: **Elektronik** dan **Peralatan Rumah Tangga** (masing-masing berpotensi jadi kategori andalan bila divalidasi dengan data penjualan nyata)
 - Rentang harga cukup lebar (Rp 22.000 – Rp 349.000), menunjukkan katalog bisa menampung produk dari kebutuhan harian sampai barang bernilai lebih tinggi
 - Struktur ini siap ditambah query agregasi (produk terlaris, stok menipis, dll.) begitu tabel `order` diaktifkan
+
+## Deploy ke Railway
+
+Backend, database, dan frontend di-deploy jadi satu domain menggunakan Railway:
+
+1. Push repository ini ke GitHub
+2. Buat project baru di Railway → **Deploy from GitHub repo**
+3. Di pengaturan service, set **Root Directory** ke `backend`
+4. Tambahkan plugin **MySQL** ke project yang sama
+5. Di tab **Variables** service backend, tambahkan reference ke MySQL plugin (Railway otomatis menyediakan `MYSQLHOST`, `MYSQLUSER`, `MYSQLPASSWORD`, `MYSQLDATABASE`, `MYSQLPORT`) — `config/db.js` sudah mendukung variabel ini secara otomatis
+6. Jalankan `backend/database/schema.sql` dan `backend/database/seed.sql` ke database Railway (connect lewat DBeaver menggunakan kredensial dari tab **Connect** di plugin MySQL Railway)
+7. Setelah deploy selesai, buka domain publik yang diberikan Railway — frontend dan API akan tersaji dari domain yang sama
 
 ## Arah Pengembangan Selanjutnya
 
