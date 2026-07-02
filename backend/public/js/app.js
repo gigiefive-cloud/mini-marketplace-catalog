@@ -5,9 +5,13 @@
 // meskipun backend belum dijalankan.
 // ============================================================
 
-// Pakai path relatif: otomatis mengikuti domain tempat halaman ini disajikan
-// (bekerja baik saat lokal lewat "npm run dev" maupun setelah deploy ke Railway)
-const API_BASE_URL = '/api';
+// Deteksi otomatis alamat API:
+// - Kalau halaman dibuka lewat Live Server (port 5500) atau langsung dari file,
+//   backend dianggap jalan terpisah di localhost:3000
+// - Kalau halaman disajikan oleh Express sendiri (dev biasa / setelah deploy
+//   ke Railway), pakai path relatif karena satu domain dengan API
+const isLiveServerOrFile = window.location.port === '5500' || window.location.protocol === 'file:';
+const API_BASE_URL = isLiveServerOrFile ? 'http://localhost:3000/api' : '/api';
 
 const state = {
   allProducts: [],
