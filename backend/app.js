@@ -28,7 +28,7 @@ app.use('/api/products', productRoutes);
 
 // Sajikan frontend statis (HTML/CSS/JS) dari folder ../frontend
 // Ini yang membuat backend & frontend jadi satu domain saat deploy
-const frontendPath = path.join(__dirname, '../frontend');
+const frontendPath = path.join(__dirname, 'public');
 app.use(express.static(frontendPath));
 
 // Fallback: rute selain /api/* diarahkan ke index.html (mendukung refresh di halaman manapun)
